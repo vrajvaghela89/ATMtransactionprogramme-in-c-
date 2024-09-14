@@ -1,0 +1,69 @@
+#include<iostream>
+using namespace std;
+int main()
+{   int n;
+    float balance=0;
+    float amount;
+    cout<<"welcome to out ATM :"<<endl;
+    cout<<"which service have to you want :"<<endl;
+    cout<<" 1. checking balance :"<<endl;
+    cout<<" 2. withdraw money  :"<<endl;
+    cout<<" 3. deposit money   :"<<endl;
+    cout<<" 4. exit   :"<<endl;
+    cout<<"entering number :"<<endl;
+    cin>>n;
+    
+    switch(n)
+    {
+        case 1:
+        cout<<"avialable balance is :";
+        cout<<balance;
+        break;
+        case 2:
+        cout<<"enter the amount:";
+        cin>>amount;
+        
+        if(balance==0)
+        {
+            cout<<"balance is zero :";
+        }
+        else if(amount>balance)
+        {
+            cout<<"balance is not sufficent :";
+        }
+        else 
+        {
+            balance=balance-amount;
+            cout<<"transaction is successful :";
+            cout<<"avialable balance is :"<<balance;
+        }
+        case 3:
+        int nu;
+        cout<<"enter the amount ";
+        cin>>amount;
+        balance=balance+amount;
+        cout<<"deposit money successful";
+        cout<<"would you like to check balance :";
+        cout<<"1.Yes";
+        cout<<"2.No";
+        cin>>nu;
+        if(nu==1)
+        {
+            cout<<balance;
+        }
+        else
+        {
+            cout<<"okay";
+        }
+        break;
+        case 4:
+        cout<<"exit";
+        default:
+        cout<<"entering choice between 1 to 4";
+        
+        
+    }
+    
+    
+    
+}
